@@ -1,18 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-      <h1>Welcome to My Website</h1>
-      <p>This is a paragraph of text on my website.</p>
-    </main>
-    <script src="index.js"></script>
-  </body>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>Garth Ghearing | ETSU</title>
+<style>
+/* These styles just pretty up the page a bit. */
+html { 
+	background:url("https://web.archive.org/web/20240917214538/https://faculty.etsu.edu/ghearingg/img/back.jpg") no-repeat center center fixed;  
+	background-size: cover;      
+	background-attachment: fixed;
+	 }
+body {
+	font: .75em Arial, Helvetica, sans-serif;
+	 }
+#wrap {
+	font-size: 1.3em;
+	width: 90%;
+	padding: 0;
+	margin:.5em auto; 
+	background: url("https://web.archive.org/web/20240918011644/https://faculty.etsu.edu/ghearingg/img/wrapback.png");
+	position: relative; }
+/* These styles create the dropdown menus. */
+#navbar {
+	margin: 0;
+	padding: 0;
+	position:absolute;
+	left:0;
+	top:0;
+	height: 3em;
+	z-index:2; }
+#navbar li {
+	display: block;
+	background-color: #fff;
+	list-style: none;
+	float: left;
+	z-index:2; }
+#navbar li a {
+	display: block;
+	padding: .75em .75em;
+	background-color: #00285a;
+	border-right: 2px solid #000;
+	color: #fff;
+	text-decoration: none;
+	z-index:2; }
+#navbar li ul {
+	display: none; 
+	width: 10em; /* Width to help Opera out */
+	background-color: #5a0028;
+	z-index:2;}
+#navbar li:hover ul, #navbar li.hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index:2; }
+#navbar li:hover li, #navbar li.hover li {
+	float: none;
+	z-index:2; }
+#navbar li:hover li a, #navbar li.hover li a {
+	background-color: #325A8C;
+	border-bottom: 1px solid #325A8C;
+	color: #fff;
+	z-index:2; }
+#navbar li a:hover {
+	background-color:#808000;
+	z-index:2; }
+#navbar li li a:hover {
+	background-color: #88885a;
+	z-index:2; }
+#content {
+	margin:5px 25px 25px 25px;
+	padding: 5px;
+	z-index:2;}
+.boxed {
+	display: block;
+	padding: .75em .75em;
+	background-color: #00285a;
+	color: #fff;
+	text-decoration: none;
+	z-index:2;
+}
+#rcont {
+	border: 0 ;
+	width:60%; 
+	position:absolute;
+	right:5%; 
+	top:5em;
+	display: block;
+	padding: .75em .75em;
+	color: #fff;
+	z-index:2;
+}
+</style>
+<script>
+// Javascript originally by Patrick Griffiths and Dan Webb.
+// http://htmldog.com/articles/suckerfish/dropdowns/
+sfHover = function() {
+	var sfEls = document.getElementById("navbar").getElementsByTagName("li");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" hover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" hover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
+</head>
+<body>
+ 
+	<center><img src="https://web.archive.org/web/20240918001012/https://faculty.etsu.edu/ghearingg/img/CADDETSUHeaderdark.png" alt="ETSU logo with CADD markup" style="margin:1em; width:90%;">
+        </center>
+	<div id="wrap">
+    <img src="https://web.archive.org/web/20240917201429/https://faculty.etsu.edu/ghearingg/img/navback.jpg" alt="blue background" style="width:100%; height:2.75em;"/>
+    <ul id="navbar">
+		<!-- The strange spacing herein prevents an IE6 whitespace bug. -->
+			<li><a href="">Home</a></li>
+            <li><a href="">Current Classes</a>
+            	<ul>
+					<li><a href="">ENTC 2170 - Computer Aided Drafting and Design</a></li>
+					<li><a href="">ENTC 2320 - Electronics I</a></li>
+					<li><a href="">ENTC 2510 - Introduction to Robotics</a></li>
+	                <li><a href="">ENTC 4900 - Industrial Efficiency</a></li>
+	                <li><a href="">ENTC 4957/5957 - Introduction to Mechatronics</a></li>
+                	<li><a href="">ENTC 5900 - Real-time 3D Model Interaction</a></li>
+               	</ul>
+			</li>
+			<li><a href="">Clubs/Projects</a>
+				<ul>
+					<li><a href="">Society of Manufacturing Engineers</a></li>
+                    <li><a href="">Industrial Assessment Center</a></li>
+                    <li><a href="">GearUp</a></li>
+                    <li><a href="">Robotics Club</a></li>
+                </ul>
+			</li>
+			<li><a href="">Vitae</a></li>
+			<li><a href="">Contact/Schedule</a></li>
+			<li><a href="https://www.etsu.edu/cas/applied-design/">Dept. Site</a></li>
+   			<li><a href="https://www.etsu.edu/">ETSU.edu</a></li>
+		</ul>
+		<div id="rcont"></div>
+	  <div id="content">
+        <h1>ENTC 4957/5957 - Introduction to Mechatronics</h1>
+		<div style align="center"><strong>Syllabus:</strong></div>
+		<div style align="center">(<a href="">pdf version here</a>)</div>
+		<hr/>
+		<div>
+		  <div style align="center"><strong>East Tennessee State University &bull; Department of Engineering Technology<br/>
+		    ENTC 4957/5957 - &bull; Introduction to Mechatronics &bull; Spring 2012</strong><br/>
+		    <br/>
+		    <strong>Instructor</strong>&nbsp;- Mr. Garth Ghearing<br/>
+		    <strong>Classroom</strong>&nbsp;- 111C Wilson Wallis Hall<br/>
+		    <strong>Class times</strong>&nbsp;-&nbsp;Tuesday and Thursday 9:45-12:35<br/>
+		    <strong>E-mail</strong>&nbsp;- ghearingg@etsu.edu<br/>
+		    <strong>Phone</strong>&nbsp;- (423) 439-7825<br/>
+		    <strong>Office</strong>&nbsp;- 111A Wilson Wallis Hall<br/>
+		    <strong>Office Hours</strong>&nbsp;- Mon., Wed., &amp; Fri. 6:45-9:15AM<br/>
+		    <strong>Class Homepage</strong>&nbsp;-&nbsp;<a href="https://elearn.etsu.edu/d2l/home">https://elearn.etsu.edu/d2l/</a><br/>
+	      </div>
+		  <hr/>
+		  <div><strong>I - Course Description, Credit Hours, and Prerequisite</strong><b>s </b>		</div>
+	    </div>
+		<p> ENTC 4957/5957-002 (4 credits). Introduction to Mechatronics. The design and development of both remote controlled and autonomous robotics. Lecture and Lab.</p>
+<hr/>
+    			<b>II - Course Objectives</b>
+    			<p>The purpose of this class is to  allow the students to work on a real world engineering technology assignment  with complex requirements. Upon the successful completion of the course, the  student will have developed and demonstrated the ability to: <br/>
+&bull; design and fabricate a mechanical  structure for fulfilling a predetermined task; <br/>
+&bull; develop a microcontrolled  system of motors and sensors for this structure;<br/>
+&bull; program the completed robotic  system to perform other dissimilar tasks; <br/>
+&bull; work together with other  classmates in a collaborative effort towards a more complex system; </p>
+<hr/>
+    			<p><strong>III - Texts and Materials</strong></p>
+    			<p> Required Textbook:&nbsp;
+   			    None&nbsp;<br/>
+    			</p>
+    			<hr/>
+    			<b>IV - Attendance  Policy</b>
+    			<p>Attendance  may be taken at any time during each class meeting. <strong><em>Your presence and participation  are important.</em> </strong>&nbsp;In-class  design/programming assignments will not necessarily be announced prior to those  class meeting(s).</p>
+	
+<hr/>
+    			<b>V - Evaluation  and Grading </b>
+		<p>Grading  is based on your performance as revealed in your in-class laboratories,  homework assignments, project presentation and report, the midterm exam, and  the final exam.	    </p>
+    		<p>1.  Project&hellip;&hellip;&hellip;&hellip;.&hellip;.&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.&hellip;.&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;50% <br/>
+2.  Paper/Presentation.&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..&hellip;&hellip;&hellip;&hellip;&hellip;..50% </p>
+    		
+<p><br/>
+                    <strong>Minimum Score to Receive</strong><br/>
+    			 <p>A = 90, B+ = 87, B = 83, B- = 80, C+ = 77, C = 73, C- = 70, D+ = 67, D = 60, F = Below 60%
+</p>
+    			 <p>Students with documented  needs for note taking, test taking, or other classroom accommodations should  make arrangements with the instructor early in the term. Contact the ETSU  Disability Services, Lower Level D.P. Culp Center (Seahorn Rd. entrance)<br/>
+                 Voice: (423) 439-8346; Fax: (423) 439-8489; TDD: (423) 439-8370 </p>
+<div></div>
+<hr/>
+    			<p><strong>VI - Attachment  Link for Academic Misconduct, Disabilities, Counseling, Dates, Tutoring, etc. </strong><br/>
+                  <a href="">http://www.etsu.edu/reg/academics/syllabus.aspx</a></p>
+    			<hr/>
+        </p>
+      </div>
+	</div>
+</body>
 </html>
